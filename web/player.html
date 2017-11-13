@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>玩家信息查询</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+    <style type="text/css">
+		#fm{
+			margin:0;
+			padding:10px 30px;
+		}
+		.ftitle{
+			font-size:14px;
+			font-weight:bold;
+			color:#666;
+			padding:5px 0;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+		.fitem{
+			margin-bottom:5px;
+		}
+		.fitem label{
+			display:inline-block;
+			width:80px;
+		}
+	</style>
+    	
+    <!--<link rel="stylesheet" type="text/css" href="css/demo.css">-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="locale/easyui-lang-zh_CN.js"></script>   
+	<script type="text/javascript" src="code/base.js"></script>
+	<script type="text/javascript" src="code/player.js"></script>
+</head>
+<body>      
+	<table id="dg" title="玩家管理" class="easyui-datagrid" style="width:800px;height:500px"        
+        toolbar="#toolbar"
+        rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>                
+            </tr>
+        </thead>
+    </table>
+    <div id="toolbar">   
+    		<td>玩家id:</td>
+		<td>
+			<input class="easyui-validatebox" id="playerid" style="width:80px">
+		</td>		
+        <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="doSearch()">查找</a>  
+        <div>        		
+        		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="addGold()">充值</a>
+        		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="disableUser()">封号</a>
+        		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="enableUser()">解封</a>
+        </div>
+  	</div> 
+  	<div style="padding:5px 0;">
+		<a href="#" class="easyui-linkbutton" style="width:80px" onclick="doLastPage()">上一页</a>
+		<a href="#" class="easyui-linkbutton" style="width:80px" onclick="doNextPage()">下一页</a>
+		<a id="pageInfo">无数据</a>
+		<a >转到第</a>
+		<input class="easyui-validatebox" id="pageIndex" style="width:80px">
+		<a >页</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="doRefreshPage()" style="width:80px">刷新</a>
+	</div>
+	<div id="gold_dlg" class="easyui-dialog" style="width:300px;height:240px;padding:10px 10px 10px 10px"
+            closed="true" buttons="#gold-buttons">
+        <div class="ftitle">充值信息</div>   
+            <div class="fitem" >
+                <label >id:</label>
+                <label id="gold_id" >00000</label>
+            </div>      
+            <div class="fitem" >
+                <label >名字:</label>
+                <label id="gold_name" >00000</label>
+            </div>  
+            <div class="fitem" >
+                <label >剩余钻石:</label>
+                <label id="gold_now" >00000</label>
+            </div>  
+            <div class="fitem">
+                <label>充值数量:</label>
+                <input id="gold_value" type="text" class="easyui-numberbox" value="1" data-options="min:-100000,precision:0">
+            </div>   
+            
+            <div id="gold-buttons">
+        		<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="charge()">充值</a>
+        		<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#gold_dlg').dialog('close')">取消</a>
+        		</div>
+    </div>
+    <script>
+		$(function(){
+			init();
+		});
+	</script>
+</body>
+</html>
+

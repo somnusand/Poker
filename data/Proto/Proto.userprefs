@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{9531E681-663E-4D24-A2FD-545A5A12F892}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proto/Parse.cs">
+    <Files>
+      <File FileName="Proto/Program.cs" Line="16" Column="36" />
+      <File FileName="Proto/Proto/Room.cs" Line="346" Column="1" />
+      <File FileName="Proto/Proto/User.cs" Line="26" Column="19" />
+      <File FileName="Proto/Proto/Account.cs" Line="20" Column="2" />
+      <File FileName="Proto/Parse.cs" Line="162" Column="28" />
+      <File FileName="Proto/Export.cs" Line="1" Column="1" />
+      <File FileName="Proto/LuaExport.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Proto PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

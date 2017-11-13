@@ -1,0 +1,157 @@
+ManifestFileVersion: 0
+CRC: 2107994564
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2f58a24b325f27b2ceb232c3df49ac1d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e5edd2a72491e7d89e38ab806f04173e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c7446140074aad343b498d722c626cd4, type: 3}
+- Class: 114
+  Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 1741964061, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -2095666955, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -405508275, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 575553740, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -1200242548, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -2061169968, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 1367256648, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 1573420865, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 2109663825, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: -1184210157, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 1297475563, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0481fd6337c354b6b86b3a10349b08fc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3e027a838bccd574e84708ffe1cb7848, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: abfb03a3c273e44cf959b9acb217d0dc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5a4b87544c15345d4aec56c4f4a3397d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1ed7da64a87b545be8f6274e75faf195, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bdcaba46baf5e7c49b0b0b5d08017fe5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b2e646662107e4c2d9ea74fe377f99c3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 26393cf70ecc443869b7ee514df3d6ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: abe08f48fcf167f4682cc1eb88280f86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b3be67883f0104b69a203fcc77e3af45, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2188479837c9cb0439bf84f1a7a567a6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b2f1e5c863b114b90a4761e45a245015, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 83b1f61a354994ddabedd3cd52413c63, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 01ef622c526b7d343976655662ea9565, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9d3a81ec3006144f1b279b58b247e294, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7fc71dfdac2ce1b4790569b4d8303471, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9192da3eaeed7f14696c99f23bd5b82c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 33ddbf5e3daa24f0c9ad9791b062c15a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c278755f801bbf84ab34f3e587cc088a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: faaae1c930899ed4193eb1292bd18dd8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 03590c059d0986e4cacc293004af389a, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resource/ui/Chat_3.prefab
+- Assets/Resource/ui/Text.prefab
+- Assets/Resource/ui/Vote.prefab
+- Assets/Resource/ui/MsgBox_2.prefab
+- Assets/Resource/ui/Debug.prefab
+- Assets/Resource/ui/Chat_2.prefab
+- Assets/Resource/ui/GangSelect.prefab
+- Assets/Resource/ui/Shop.prefab
+- Assets/Resource/ui/Info.prefab
+- Assets/Resource/ui/Menu.prefab
+- Assets/Resource/ui/UIEmotion_2.prefab
+- Assets/Resource/ui/Menu_share.prefab
+- Assets/Resource/ui/History_2.prefab
+- Assets/Resource/ui/XiangQing.prefab
+- Assets/Resource/ui/Replay.prefab
+- Assets/Resource/ui/watting.prefab
+- Assets/Resource/ui/Help_2.prefab
+- Assets/Resource/ui/ArrowN.prefab
+- Assets/Resource/ui/Chat_0.prefab
+- Assets/Resource/ui/History2_2.prefab
+- Assets/Resource/ui/MsgBox.prefab
+- Assets/Resource/ui/main.prefab
+- Assets/Resource/ui/Speach.prefab
+- Assets/Resource/ui/Chat_1.prefab
+- Assets/Resource/ui/InfoMenu.prefab
+- Assets/Resource/ui/Setting.prefab
+- Assets/Resource/ui/Game2.prefab
+Dependencies:
+- E:/PROGRAMLIST/jintanmajiang/trunk/client/Assets/StreamingAssets/font

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Form - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="code/base.js"></script>
+</head>
+<body>
+	<h2>充值功能</h2>
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-panel" title="充值" style="width:400px">
+		<div style="padding:10px 60px 20px 60px">
+	    <form id="ff" method="post">
+	    	<table cellpadding="5">
+	    		<tr>
+	    			<td>ID:</td>
+	    			<td><input id="gold_id" class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+	    			<td><a href="javascript:void(0)" class="easyui-linkbutton" onclick="getPlayerInfo()">查询</a></td>
+	    		</tr>
+	    		<tr>
+	    			<td>名字:</td>
+	    			<td id="gold_name"></td>
+            </tr>
+	    		<tr>
+	    			<td>剩余钻石:</td>
+	    			<td id="gold_now">0</td>
+            </tr>
+	    		<!--<tr>
+	    			<td>类型:</td>
+	    			<td>
+	    				<select id="gold_type" class="easyui-combobox" style="width:100px;">
+				    <option value=0>充值</option>
+				    <option value=1>赠送</option>
+					</select>
+	    			</td>
+	    		</tr>-->
+	    		<tr>
+	    			<td>数量:</td>
+	    			<td><input id="gold_value" type="text" class="easyui-numberbox" value="1" data-options="min:1,precision:0"></td>
+	    		</tr>
+	    	</table>
+	    </form>
+	    <div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清空</a>
+	    </div>
+	    </div>
+	</div>
+	<script>
+		function getPlayerInfo()
+		{
+			var data = {
+			cmd : "player_info",
+			id:  getValue("gold_id"),
+			}
+			console.log(data)
+			jsonMsg(data,function(ret){
+				console.log(ret)
+				$('#gold_dlg').dialog('close');
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {
+					setValue("gold_name",ret.data.name);
+					setValue("gold_now",ret.data.gem);
+				}
+			});
+		}
+
+		function submitForm(){
+			var data = {
+			cmd : "charge",
+			id:  getValue("gold_id"),
+			type:  0,
+			gold:  getValue("gold_value"),
+			}
+			console.log(data)
+			jsonMsg(data,function(ret){
+				console.log(ret)
+				$('#gold_dlg').dialog('close');
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {
+					$.messager.show({
+						title: '消息',
+						msg: "充值成功"
+					});
+				}
+			});
+		}
+		function clearForm(){
+			$('#ff').form('clear');
+		}
+	</script>
+</body>
+</html>

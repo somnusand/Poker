@@ -1,0 +1,55 @@
+ManifestFileVersion: 0
+CRC: 3382707781
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 624e6b3c18f3305b354f5086cef5cc0b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9bb12a7bd1929b9ec8e0f1cd32817952
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c7446140074aad343b498d722c626cd4, type: 3}
+- Class: 114
+  Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 096e1615fd2ab4796abb86f608d8a196, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: abe08f48fcf167f4682cc1eb88280f86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9d3a81ec3006144f1b279b58b247e294, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resource/effect/Buhua.prefab
+- Assets/Resource/effect/Start.prefab
+- Assets/Resource/effect/Pai.prefab
+- Assets/Resource/effect/emotion.prefab
+- Assets/Resource/effect/Hu.prefab
+- Assets/Resource/effect/Gang.prefab
+- Assets/Resource/effect/Peng.prefab
+- Assets/Resource/effect/AnimSazhi.prefab
+- Assets/Resource/effect/speek.prefab
+- Assets/Resource/effect/gang_effect.prefab
+Dependencies: []

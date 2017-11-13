@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Form - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="code/base.js"></script>	
+</head>
+<body>
+	<h2>房间功能</h2>	
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-panel" title="房间" style="width:400px">
+		<div style="padding:10px 60px 20px 60px">
+	    <form id="ff" method="post">
+	    	<table cellpadding="5">
+	    		<tr>
+	    			<td>ID:</td>
+	    			<td><input id="gold_id" class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+	    			<td><a href="javascript:void(0)" class="easyui-linkbutton" onclick="getRoomInfo()">查询</a></td>
+	    		</tr>  
+	    		<tr>
+	    			<td>玩家:</td>
+	    			<td id="gold_now">0</td>	    			
+           </tr>      	    		
+	    	</table>
+	    </form>
+	    <div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="closeRoom()">关闭房间</a>
+
+	    </div>
+	    </div>
+	</div>
+	<script>
+		function getRoomInfo()
+		{
+			var data = {
+			cmd : "room_info",
+			id:  getValue("gold_id"),	
+			}
+			console.log(data)
+			jsonMsg(data,function(ret){				
+				console.log(ret)
+				$('#gold_dlg').dialog('close');	
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {    		
+					var str = "";
+					for(var i=0;i<ret.players.length;i++){
+						if ( i== 0) {
+							str += "" + ret.players[i];
+						}
+						else {
+							str += "," + ret.players[i];
+						}
+					 	setValue("gold_now",str);	
+					}
+				}
+			});	
+		}
+		
+		function closeRoom(){					
+			var data = {
+			cmd : "close_room",
+			id:  getValue("gold_id"),	
+			}
+			console.log(data)
+			jsonMsg(data,function(ret){				
+				console.log(ret)
+				$('#gold_dlg').dialog('close');	
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {    			
+					$.messager.show({
+						title: '消息',
+						msg: "关闭房间"
+					});
+				}
+			});			
+		}
+	
+	</script>
+</body>
+</html>

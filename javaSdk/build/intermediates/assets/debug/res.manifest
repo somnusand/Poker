@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 1519563877
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3ac8dd805905af237f34341905ff62af
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5865fa7fe9d8e75a6de235137c23e0dd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c7446140074aad343b498d722c626cd4, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resource/res/cards_2.prefab
+- Assets/Resource/res/emotions.prefab
+Dependencies: []

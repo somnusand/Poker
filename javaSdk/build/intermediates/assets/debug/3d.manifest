@@ -1,0 +1,75 @@
+ManifestFileVersion: 0
+CRC: 3190662559
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 685902a77affc630f88c475e50502fe6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f43ffe12616d863407ebf12ff735ce0e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 96
+  Script: {instanceID: 0}
+- Class: 102
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: f8a78625bdaa5449599fc318416e527d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: abe08f48fcf167f4682cc1eb88280f86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9d3a81ec3006144f1b279b58b247e294, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 11f9b10db5b744f619204732af598cf0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d525900e7f090ff489157e6dd6dae8f0, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resource/3d/base.prefab
+- Assets/Resource/3d/hu_effect_gang.prefab
+- Assets/Resource/3d/fx_magic_lightning_accumulation_warmup_blue.prefab
+- Assets/Resource/3d/paibase.prefab
+- Assets/Resource/3d/fx_magic_lightning_ball_proj_fullComplex_blue.prefab
+- Assets/Resource/3d/sai.prefab
+- Assets/Resource/3d/majiang.prefab
+- Assets/Resource/3d/hu_effect_peng.prefab
+- Assets/Resource/3d/pai.prefab
+- Assets/Resource/3d/hu_effect.prefab
+- Assets/Resource/3d/Null.prefab
+- Assets/Resource/3d/hu_effect_piao.prefab
+Dependencies: []

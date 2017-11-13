@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>主页</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="code/base.js"></script>
+</head>
+<body>
+	<h2>游戏信息</h2>
+	<!--<p>当前游戏信息</p>-->
+	<div style="margin:20px 0 10px 0;">
+	</div>
+	<div id="p" class="easyui-panel" title="在线信息" style="width:600px;height:300px;padding:10px;">
+		<p id='count'></p>
+		<p id='game'></p>
+		<p id='user_count'></p>
+		<p id='d1_count'></p>
+		<p id='d2_count'></p>
+		<p id='d3_count'></p>
+	</div>
+	<script>
+		$(function(){
+			myInterval()
+			setInterval("myInterval()",5000);//1000为1秒钟
+		});
+
+       function myInterval()
+       {
+       		var data = {
+				cmd: "game_info",
+			}
+
+			console.log(data)
+			jsonMsg(data,function(ret){
+				console.log(ret)
+		    		if ( ret.error ) {
+		    			$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+		    		}
+		    		else {
+		    			setValue('count','在线玩家数：'+ret.data.count)
+						setValue('game','游戏总数：'+ret.data.game)
+						setValue('user_count','总注册数：'+ret.data.user_count)
+
+						if ( ret.data.d1_count != null ) {
+							setValue('d1_count','一级代理数：'+ret.data.d1_count)
+							setValue('d2_count','二级代理数：'+ret.data.d2_count)
+							setValue('d3_count','三级代理数：'+ret.data.d3_count)
+						}
+
+
+		    		}
+	   		});
+       }
+	</script>
+</body>
+</html>

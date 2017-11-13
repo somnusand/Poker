@@ -1,0 +1,9 @@
+[file:cfg.ex line:26] {"can't find:", "config_data/"}
+[file:log_data.ex line:48] {2017, 11, 11}
+[file:log_data.ex line:50] "LogData server started."
+[file:g_values.ex line:64] "global value server[G] started."
+[file:server.ex line:31] :nonode@nohost
+[file:tcp_server.ex line:22] "tcp server started."
+[file:cmd_server.ex line:70] "cmd server started."
+[file:tcp_server.ex line:130] "do close socket"
+[file:tcp_server.ex line:130] "do close socket"

@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 1659104501
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: effect
+      Dependencies: {}
+    Info_1:
+      Name: res
+      Dependencies: {}
+    Info_2:
+      Name: ui
+      Dependencies:
+        Dependency_0: font
+    Info_3:
+      Name: 3d
+      Dependencies: {}
+    Info_4:
+      Name: ogg
+      Dependencies: {}
+    Info_5:
+      Name: luabase
+      Dependencies: {}
+    Info_6:
+      Name: lua
+      Dependencies: {}
+    Info_7:
+      Name: font
+      Dependencies: {}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Form - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="code/base.js"></script>
+</head>
+<body>
+	<div style="margin:0px 0px;"></div>
+	<div class="easyui-panel" title="房间公告" style="width:420px">
+		<div style="padding:1px 1px 1px 1px">
+	    <form id="ff" method="post">
+	    	<table cellpadding="5">
+	    		<tr>
+					<td>显示局数:</td>
+				</tr>
+				<tr>
+					<td><input id="count" type="text" class="easyui-numberbox" value="3" data-options="min:0,precision:0"></td>
+				</tr>
+				<tr>
+					<td>显示内容:</td>
+				</tr>
+				<tr>
+					<td><input id="note" class="easyui-textbox" data-options="multiline:true" type="text" name="name" style="width:400px;height:400px"></input></td>
+	    		</tr>
+	    	</table>
+	    </form>
+	    <div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交公告</a>
+	    	<!--<a href="javascript:void(0)" class="easyui-linkbutton" onclick="init(true)">同步</a>-->
+	    </div>
+	    </div>
+	</div>
+	<script>
+		function init(show_hint){
+			var data = {
+			cmd : "get_note_hint",
+			}
+			jsonMsg(data,function(ret){
+				console.log(ret)
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {
+					var str = ret.note;
+					while (str.indexOf("\\n") >= 0) { str = str.replace("\\n", "\n"); }
+
+					$("#note").textbox("setValue",str);
+					$('#count').numberbox('setValue', ret.count);
+
+					if ( show_hint ) {
+						$.messager.show({
+							title: '消息',
+							msg: "更新成功"
+						});
+					}
+				}
+			});
+		}
+		init(false);
+		function submitForm(){
+
+			var str = 	$("#note").textbox("getValue",str);
+			while (str.indexOf("\\n") >= 0) { str = str.replace("\n", "\\n"); }
+
+			var data = {
+			cmd : "set_note_hint",
+			note:  str,
+			count:  getValue("count"),
+			}
+			console.log(data)
+			jsonMsg(data,function(ret){
+				console.log(ret)
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {
+					$.messager.show({
+						title: '消息',
+						msg: "设置成功"
+					});
+				}
+			});
+		}
+	</script>
+</body>
+</html>

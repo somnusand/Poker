@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Form - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="code/base.js"></script>	
+</head>
+<body>
+	<h2>系统配置</h2>
+	<p>修改系统配置</p>
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-panel" title="系统配置" style="width:600px">
+		<div style="padding:10px 20px 20px 60px">
+	    <form id="ff" method="post">
+	    	<table cellpadding="5">
+	    		<tr>
+	    			<td>跑马灯通告:</td>
+	    			<td><input id="note" class="easyui-textbox" type="text" name="name" style="width:400px"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>购买提示:</td>
+	    			<td><input id="shop" class="easyui-textbox" type="text" name="name" style="width:400px"></input></td>
+	    		</tr>	
+	    		<tr>
+	    			<td>注册赠送砖石:</td>	    			
+	    			<td><input id="gold" type="text" class="easyui-numberbox" value="1" data-options="min:0,precision:0"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>版本</td>	    			
+	    			<td><input id="ver" type="text" class="easyui-numberbox" value="1" data-options="min:0,precision:0"></td>
+	    		</tr>
+	    		<tr>
+	    			<td><input id="test" type="checkbox" class="easyui-checkbox" value="1" data-options="min:0,precision:0">测试模式</td>
+	    		<tr>
+	    	</table>
+	    </form>
+	    <div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交设置</a>
+	    	<!--<a href="javascript:void(0)" class="easyui-linkbutton" onclick="init(true)">同步</a>-->
+	    </div>
+	    </div>
+	</div>
+	<script>
+		function init(show_hint){					
+			var data = {
+			cmd : "get_cfg_ex",	
+			}
+			jsonMsg(data,function(ret){				
+				console.log(ret)				
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {    	
+					$("#note").textbox("setValue",ret.note);
+					$("#shop").textbox("setValue",ret.shop);
+					$('#gold').numberbox('setValue', ret.gold);
+					$('#ver').numberbox('setValue', ret.ver);
+					
+					
+					
+					document.getElementById("test").checked  = (ret.test == 1)
+					 
+					if ( show_hint ) {
+						$.messager.show({
+							title: '消息',
+							msg: "更新成功"
+						});
+					}
+				}
+			});			
+		}		
+		init(false);
+		function submitForm(){		
+			var is_test = 0
+			if ( document.getElementById("test").checked ) {
+				is_test = 1
+			}
+			var data = {
+			cmd : "set_cfg_ex",
+			note:  getValue("note"),
+			shop:  getValue("shop"),		
+			gold:  getValue("gold"),		
+			ver:  getValue("ver"),		
+			test: is_test
+			}
+			console.log(data)
+			jsonMsg(data,function(ret){				
+				console.log(ret)			
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {    			
+					$.messager.show({
+						title: '消息',
+						msg: "设置成功"
+					});
+				}
+			});			
+		}		
+	</script>
+</body>
+</html>

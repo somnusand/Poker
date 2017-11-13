@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 1812759765
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a031a5e55bed4a3f24033e0079a032be
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resource/lua/proto_proto.lua.bytes
+- Assets/Resource/lua/Main.lua.bytes
+- Assets/Resource/lua/game_client.lua.bytes
+- Assets/Resource/lua/net_baseread.lua.bytes
+- Assets/Resource/lua/ui_game_ui_3.lua.bytes
+- Assets/Resource/lua/proto_user.lua.bytes
+- Assets/Resource/lua/game_ui_onclick.lua.bytes
+- "Assets/Resource/lua/ui_game_ui_2 - \u526F\u672C.lua.bytes"
+- Assets/Resource/lua/ui_game_ui_21.lua.bytes
+- Assets/Resource/lua/net_basewrite.lua.bytes
+- Assets/Resource/lua/ui_game_ui_221.lua.bytes
+- Assets/Resource/lua/game_clienthandle.lua.bytes
+- Assets/Resource/lua/config_exConfig.lua.bytes
+- Assets/Resource/lua/ui_game_ui_2.lua.bytes
+- Assets/Resource/lua/proto_account.lua.bytes
+- Assets/Resource/lua/ui_game_ui_23.lua.bytes
+- Assets/Resource/lua/ui_main_ui.lua.bytes
+- Assets/Resource/lua/base_sound.lua.bytes
+- Assets/Resource/lua/proto_room.lua.bytes
+- Assets/Resource/lua/base_tools.lua.bytes
+- Assets/Resource/lua/base_ui.lua.bytes
+- Assets/Resource/lua/ui_game_ui_1.lua.bytes
+- Assets/Resource/lua/net_net.lua.bytes
+Dependencies: []

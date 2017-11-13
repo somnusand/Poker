@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>帐号管理</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+    <style type="text/css">
+		#fm{
+			margin:0;
+			padding:10px 30px;
+		}
+		.ftitle{
+			font-size:14px;
+			font-weight:bold;
+			color:#666;
+			padding:5px 0;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+		.fitem{
+			margin-bottom:5px;
+		}
+		.fitem label{
+			display:inline-block;
+			width:80px;
+		}
+	</style>
+    	
+    <!--<link rel="stylesheet" type="text/css" href="css/demo.css">-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="locale/easyui-lang-zh_CN.js"></script>   
+	<script type="text/javascript" src="code/base.js"></script>
+	<script type="text/javascript" src="code/daili.js"></script>
+	
+</head>
+<body>
+    <table id="dg" title="代理管理" class="easyui-datagrid" style="width:550px;height:250px"        
+        toolbar="#toolbar"
+        rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>                
+            </tr>
+        </thead>
+    </table>
+    <div id="toolbar">
+   	 	<td>代理id:</td>
+		<td>
+			<input class="easyui-validatebox" id="playerid" style="width:80px">
+		</td>		
+        <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="doSearch()">查找</a>  
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="showNewUser()">新建帐号</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">充值</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">删除</a>
+    </div>
+
+    <div id="new_dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+            closed="true" buttons="#dlg-buttons">
+        <div class="ftitle">玩家ID</div>   
+            <div class="fitem" >
+                <label >id:</label>
+                <input id="new_acc_id" class="easyui-validatebox" required="true">
+            </div>
+    </div>
+    <div id="dlg-buttons">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="newUser()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#new_dlg').dialog('close')">取消</a>
+    </div>
+    <div id="gold_dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+            closed="true" buttons="#gold-buttons">
+        <div class="ftitle">充值信息</div>   
+            <div class="fitem" >
+                <label >id:</label>
+                <label id="gold_id" >00000</label>
+            </div>            
+            <div class="fitem">
+                <label>类型:</label>
+                <select id="gold_type" class="easyui-combobox" name="dept" style="width:200px;">
+				    <option value=0>充值</option>
+				    <option value=1>赠送</option>
+				</select>
+            </div> 
+            <div class="fitem">
+                <label>数量:</label>
+                <input id="gold_value" type="text" class="easyui-numberbox" value="1" data-options="min:1,precision:0">
+            </div>   
+    </div>
+    <div id="gold-buttons">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="charge()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#gold_dlg').dialog('close')">取消</a>
+    </div>
+</body>
+</html>
+

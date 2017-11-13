@@ -1,0 +1,62 @@
+ManifestFileVersion: 0
+CRC: 3404942528
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8c34e28851170489ab72ab3949d7c761
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resource/luabase/protobuf_protobuf.lua.bytes
+- Assets/Resource/luabase/slot.lua.bytes
+- Assets/Resource/luabase/socket_headers.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Quaternion.lua.bytes
+- Assets/Resource/luabase/System_Reflection_BindingFlags.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Time.lua.bytes
+- Assets/Resource/luabase/System_ValueType.lua.bytes
+- Assets/Resource/luabase/socket.lua.bytes
+- Assets/Resource/luabase/UnityEngine_RaycastHit.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Touch.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Plane.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Vector4.lua.bytes
+- Assets/Resource/luabase/cjson_util.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Vector3.lua.bytes
+- Assets/Resource/luabase/UnityEngine_LayerMask.lua.bytes
+- Assets/Resource/luabase/mime.lua.bytes
+- Assets/Resource/luabase/socket_url.lua.bytes
+- Assets/Resource/luabase/protobuf_type_checkers.lua.bytes
+- Assets/Resource/luabase/misc_utf8.lua.bytes
+- Assets/Resource/luabase/socket_http.lua.bytes
+- Assets/Resource/luabase/socket_mbox.lua.bytes
+- Assets/Resource/luabase/socket_ftp.lua.bytes
+- Assets/Resource/luabase/protobuf_listener.lua.bytes
+- Assets/Resource/luabase/ltn12.lua.bytes
+- Assets/Resource/luabase/misc_strict.lua.bytes
+- Assets/Resource/luabase/event.lua.bytes
+- Assets/Resource/luabase/misc_misc.lua.bytes
+- Assets/Resource/luabase/list.lua.bytes
+- Assets/Resource/luabase/lpeg_re.lua.bytes
+- Assets/Resource/luabase/misc_functions.lua.bytes
+- Assets/Resource/luabase/protobuf_containers.lua.bytes
+- Assets/Resource/luabase/protobuf_text_format.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Ray.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Vector2.lua.bytes
+- Assets/Resource/luabase/protobuf_wire_format.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Bounds.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Mathf.lua.bytes
+- Assets/Resource/luabase/protobuf_descriptor.lua.bytes
+- Assets/Resource/luabase/protobuf_encoder.lua.bytes
+- Assets/Resource/luabase/tolua.lua.bytes
+- Assets/Resource/luabase/System_coroutine.lua.bytes
+- Assets/Resource/luabase/socket_smtp.lua.bytes
+- Assets/Resource/luabase/System_Timer.lua.bytes
+- Assets/Resource/luabase/typeof.lua.bytes
+- Assets/Resource/luabase/socket_tp.lua.bytes
+- Assets/Resource/luabase/UnityEngine_Color.lua.bytes
+- Assets/Resource/luabase/protobuf_decoder.lua.bytes
+Dependencies: []

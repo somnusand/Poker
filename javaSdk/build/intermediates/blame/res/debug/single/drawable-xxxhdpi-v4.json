@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\PROGRAMLIST\\jintanmajiang\\jingtan\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\app_icon.png",
+        "source": "E:\\PROGRAMLIST\\jintanmajiang\\jingtan\\src\\main\\res\\drawable-xxxhdpi\\app_icon.png"
+    },
+    {
+        "merged": "E:\\UnityPackage\\ShandongAS\\shand\\shand\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\app_icon.png",
+        "source": "E:\\UnityPackage\\ShandongAS\\shand\\shand\\src\\main\\res\\drawable-xxxhdpi\\app_icon.png"
+    }
+]

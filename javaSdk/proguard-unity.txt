@@ -1,0 +1,15 @@
+-keep class bitter.jnibridge.* { *; }
+-keep class com.unity3d.player.* { *; }
+-keep class org.fmod.* { *; }
+
+-keep class com.tencent.mm.opensdk.** {
+   *;
+}
+
+-keep class com.tencent.wxop.** {
+   *;
+}
+
+-keep class com.tencent.mm.sdk.** {
+   *;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>后台管理中心</title>
+    <link rel="stylesheet" href="css/pintuer.css">
+    <link rel="stylesheet" href="css/admin.css" id="css" >
+    <script src="js/jquery.min.js"></script>
+</head>
+<body style="background-color:#f2f9fd;">
+<div class="header bg-main">
+  <div class="logo margin-big-left fadein-top">
+    <h1><img src="images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" /></h1>
+
+  </div>
+  <div class="head-l">
+  	<button class="button button-little bg-green" onclick="changeStyle()"><span class="icon-list"></span> 菜单列表</button> &nbsp;&nbsp;
+  	<!--<a href="##" class="button button-little bg-blue"><span class="icon-wrench"></span> 清除缓存</a> &nbsp;&nbsp;-->
+  	<!--<label id='admin_name'>管理员</label>&nbsp;&nbsp;-->
+  	<a class="button button-little bg-red" href="login.html"><span class="icon-power-off"></span> 退出登录</a>
+  </div>
+</div>
+<div class="leftnav">
+  <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
+  <h2><span class="icon-pencil-square-o"></span>基本功能</h2>
+  <ul style="display:block">
+    <li><a href="player.html" target="right"><span class="icon-caret-right"></span>玩家管理</a></li>
+    <li><a href="d_acc.html" target="right"><span class="icon-caret-right"></span>代理管理</a></li>
+    <li><a href="acc.html" target="right"><span class="icon-caret-right"></span>管理员</a></li>
+    <li><a href="cfg.html" target="right"><span class="icon-caret-right"></span>系统配置</a></li>
+    <li><a href="tools.html" target="right"><span class="icon-caret-right"></span>管理工具</a></li>
+    <li><a href="playergem.html" target="right"><span class="icon-caret-right"></span>玩家钻石记录</a></li>
+    <li><a href="a_dailigold.html" target="right"><span class="icon-caret-right"></span>代理钻石记录</a></li>
+    <li><a href="note.html" target="right"><span class="icon-caret-right"></span>游戏公告</a></li>
+    <li><a href="note0.html" target="right"><span class="icon-caret-right"></span>房间公告</a></li>
+  </ul>
+  <h2><span class="icon-search-minus"></span>统计信息</h2>
+  <ul style="display:block">
+    <li><a href="days.html" target="right"><span class="icon-caret-right"></span>每日统计</a></li>
+  </ul>
+  <h2><span class="icon-user"></span>帐号管理</h2>
+  <ul style="display:block">
+    <li><a href="pwd.html" target="right"><span class="icon-caret-right"></span>修改密码</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+//var name = sessionStorage.getItem('login_name')
+//$("#admin_name").html(n	ame)
+$(function(){
+  $(".leftnav h2").click(function(){
+	  $(this).next().slideToggle(200);
+	  $(this).toggleClass("on");
+  })
+  $(".leftnav ul li a").click(function(){
+	    $("#a_leader_txt").text($(this).text());
+  		$(".leftnav ul li a").removeClass("on");
+		$(this).addClass("on");
+  })
+});
+</script>
+<ul class="bread">
+  <li><a href="info.html" target="right" class="icon-home"> 首页</a></li>
+  <li><a href="##" id="a_leader_txt">网站信息</a></li>
+  <li><b>当前语言：</b><span style="color:red;">中文</php></span>
+  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;切换语言：<a href="##">中文</a> &nbsp;&nbsp;<a href="##">英文</a> </li>-->
+</ul>
+<div class="admin">
+  <iframe scrolling="auto" rameborder="0" src="info.html" name="right" width="100%" height="100%"></iframe>
+</div>
+<script type="text/javascript">
+
+function changeStyle() {
+	if(typeof(showedMemu)=="undefined"){
+		showedMemu = true;
+	}
+	if(showedMemu) {
+		showedMemu = false;
+	   	var obj = document.getElementById("css");
+	   	obj.setAttribute("href","css/admin2.css");
+	}
+	else	{
+		showedMemu = true;
+	   	var obj = document.getElementById("css");
+	   	obj.setAttribute("href","css/admin.css");
+	}
+}
+
+var name = sessionStorage.getItem('login_name')
+console.log(name)
+if ( name == "null" || name == null ) {
+	console.log(name)
+	window.location.href='login.html';
+	setTimeout("javascript:location.href='login.html'", 5000);
+}
+</script>
+</html>

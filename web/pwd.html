@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Form - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="code/base.js"></script>	
+</head>
+<body>
+	<h2>修改密码</h2>
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-panel" title="修改密码" style="width:400px">
+		<div style="padding:10px 60px 20px 60px">
+	    <form id="ff" method="post">
+	    	<table cellpadding="5">
+	    		<tr>
+	    			<td>旧密码:</td>
+	    			<td><input id="old_pwd" class="easyui-textbox" type="password" name="name" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>新密码:</td>
+	    			<td><input id="new_pwd" class="easyui-textbox" type="password" name="name" data-options="required:true"></input></td>
+	    		</tr>    
+	    		<tr>
+	    			<td>确认新密码:</td>
+	    			<td><input id="new_pwd_ack" class="easyui-textbox" type="password" name="name" data-options="required:true" ></input></td>
+	    		</tr>    
+	    	</table>
+	    </form>
+	    <div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清空</a>
+	    </div>
+	    </div>
+	</div>
+	<script>
+	
+//		$.extend($.fn.validatebox.defaults.rules, {
+//	        /*必须和某个字段相等*/
+//	        equalTo: { validator: function (value, param) { return $(param[0]).val() == value; }, message: '字段不匹配' }
+//	       });
+       
+		function submitForm(){		
+			var old =  getValue("old_pwd") 
+			var pwd = getValue("new_pwd") 
+			var pwd_ack =  getValue("new_pwd_ack") 			
+			if ( old == '' || pwd == '' ) {
+				console.log("error...")
+				return
+			}
+			
+			if ( pwd != pwd_ack )
+			{
+				$.messager.show({
+						title: '消息',
+						msg: "密码不匹配"
+					});
+				return
+			}
+			
+			var data = {
+			cmd : "change_pwd",
+			oldPwd:  old,
+			newPwd:  pwd,				
+			}
+			console.log(data)
+			jsonMsg(data,function(ret){				
+				console.log(ret)
+				$('#gold_dlg').dialog('close');	
+				if ( ret.error ) {
+					$.messager.show({
+						title: '消息',
+						msg: ret.error
+					});
+				}
+				else {    			
+					$.messager.show({
+						title: '消息',
+						msg: "修改成功"
+					});
+				}
+			});			
+		}
+		function clearForm(){
+			$('#ff').form('clear');
+		}
+	</script>
+</body>
+</html>
